@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7EE;
+    color: #000000;
+    overflow-x: hidden;
+  }
+}
+
+/* Refined Neubrutalist Background Patterns for Sections */
+.bg-pattern-dots {
+  background-color: #FAF7EE;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.bg-pattern-blueprint {
+  background-color: #FAF7EE;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+
+.bg-pattern-grid {
+  background-color: #FAF7EE;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+
+
+
+/* Tactile Neubrutalist card & button utility classes */
+.brutal-card {
+  background-color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutal-card:hover {
+  box-shadow: 6px 6px 0px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.brutal-card-static {
+  background-color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.brutal-btn {
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutal-btn:hover {
+  box-shadow: 1px 1px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.brutal-btn:active {
+  box-shadow: 0px 0px 0px 0px #000000;
+  transform: translate(3px, 3px);
+}
+
+.brutal-badge {
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px 0px #000000;
+  font-weight: 800;
+}
+
+/* Neubrutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+  border-left: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B4A;
+}

@@ -32,16 +32,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-pattern-blueprint border-b-[3px] border-black">
+    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-pattern-blueprint border-b-[3px] border-black dark:border-[#2D3342] transition-colors duration-200">
       
       {/* Background Architectural Blueprint Stamps */}
-      <div className="absolute top-20 right-8 font-mono text-[10px] font-bold text-slate-400 select-none hidden xl:block tracking-widest border border-slate-300 px-2 py-0.5 rounded bg-white/60">
+      <div className="absolute top-20 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-slate-700 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
         SPEC: AA-ENG-2026 // GRID 120x24
       </div>
-      <div className="absolute bottom-6 right-8 font-mono text-[10px] font-bold text-slate-400 select-none hidden xl:block tracking-widest border border-slate-300 px-2 py-0.5 rounded bg-white/60">
+      <div className="absolute bottom-6 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-slate-700 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
         MATH & COMPUTING RIGOR // DTU 9.03
       </div>
-      <div className="absolute top-24 left-8 font-mono text-[10px] font-bold text-slate-400 select-none hidden xl:block tracking-widest">
+      <div className="absolute top-24 left-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest">
         + COORD: 12.9716° N, 77.5946° E
       </div>
 
@@ -52,28 +52,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
           <div className="lg:col-span-8 flex flex-col items-start order-2 lg:order-1">
             
             {/* Top Status Capsule */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border-2 border-black text-xs font-mono font-bold text-black mb-8 shadow-[3px_3px_0px_#000]">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#181B26] border-2 border-black text-xs font-mono font-bold text-black dark:text-white mb-8 shadow-[3px_3px_0px_#000]">
               <span className="w-2.5 h-2.5 rounded-full bg-[#22C55E] border border-black inline-block animate-pulse"></span>
               <span>SOFTWARE ENGINEER @ WELLS FARGO</span>
               <span className="text-slate-400">|</span>
-              <span className="text-black">BACKEND & AI SYSTEMS</span>
+              <span className="text-black dark:text-slate-200">BACKEND & AI SYSTEMS</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-black mb-8 leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-black dark:text-white mb-8 leading-[1.1]">
               Hi, I'm{' '}
-              <span className="bg-[#FFE600] px-3 py-1 border-[2.5px] border-black inline-block shadow-[4px_4px_0px_#000] -rotate-1 rounded-lg">
+              <span className="bg-[#FFE600] px-3 py-1 border-[2.5px] border-black inline-block shadow-[4px_4px_0px_#000] -rotate-1 rounded-lg text-black">
                 Abhishek Aggarwal
               </span>.
               <br />
-              <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mt-2 block">
+              <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-800 dark:text-slate-200 mt-2 block">
                 I build high-scale backend microservices & autonomous AI agents.
               </span>
             </h1>
 
             {/* Subtitle / Bio note */}
-            <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed max-w-2xl mb-10">
-              Software Engineer at <strong className="text-black font-extrabold underline decoration-[#FFE600] decoration-4">Wells Fargo</strong> with 2+ years designing distributed systems, role-based hybrid search algorithms, and production web platforms.
+            <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mb-10">
+              Software Engineer at <strong className="text-black dark:text-white font-extrabold underline decoration-[#FFE600] decoration-4">Wells Fargo</strong> with 2+ years designing distributed systems, role-based hybrid search algorithms, and production web platforms.
             </p>
 
             {/* Action CTAs */}
@@ -99,16 +99,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-black font-mono font-bold text-xs border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-[#181B26] hover:bg-slate-50 dark:hover:bg-[#222736] text-black dark:text-white font-mono font-bold text-xs border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 {copied ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-600" />
-                    <span className="text-emerald-700 font-extrabold">Copied!</span>
+                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                    <span className="text-emerald-700 dark:text-emerald-300 font-extrabold">Copied!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-black" />
+                    <Copy className="w-4 h-4 text-black dark:text-white" />
                     <span>Copy Email</span>
                   </>
                 )}
@@ -132,11 +132,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
               <img 
                 src={`${import.meta.env.BASE_URL}abhishek-avatar.png`} 
                 alt="Abhishek Aggarwal" 
-                className="w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain filter drop-shadow-[8px_8px_0px_#000] group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 select-none"
+                className="w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain filter drop-shadow-[8px_8px_0px_#000] dark:drop-shadow-[8px_8px_0px_#FFE600] group-hover:scale-105 group-hover:-rotate-1 transition-all duration-300 select-none"
               />
 
               {/* Bottom sticker badge */}
-              <div className="absolute -bottom-2 -right-1 px-3 py-1 rounded-md bg-white border-2 border-black font-mono font-bold text-[11px] text-black shadow-[2.5px_2.5px_0px_#000] rotate-3 group-hover:rotate-0 transition-all">
+              <div className="absolute -bottom-2 -right-1 px-3 py-1 rounded-md bg-white dark:bg-[#181B26] border-2 border-black font-mono font-bold text-[11px] text-black dark:text-white shadow-[2.5px_2.5px_0px_#000] rotate-3 group-hover:rotate-0 transition-all">
                 <span>⚡ 100% BUILDER</span>
               </div>
             </div>

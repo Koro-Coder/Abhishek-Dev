@@ -27,7 +27,7 @@ export const SkillsRadar: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-24 bg-pattern-grid border-t-[3px] border-black relative">
+    <section id="skills" className="py-24 bg-pattern-grid border-t-[3px] border-black dark:border-[#2D3342] relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -37,23 +37,23 @@ export const SkillsRadar: React.FC = () => {
               <Wrench className="w-4 h-4" />
               <span>TECHNICAL ARSENAL</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
               Skills, Frameworks & Infra
             </h2>
-            <p className="text-slate-800 text-sm sm:text-base max-w-2xl font-medium mt-3">
+            <p className="text-slate-800 dark:text-slate-300 text-sm sm:text-base max-w-2xl font-medium mt-3">
               Production-hardened toolchain spanning distributed backend services, vector search algorithms, and modern frontend engines.
             </p>
           </div>
 
           {/* Interactive Search Bar for Recruiters */}
           <div className="relative w-full md:w-80">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-black" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-black dark:text-white" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search skills (Java, LLM, Docker)..."
-              className="w-full pl-10 pr-4 py-2.5 bg-white border-2 border-black rounded-xl text-xs font-mono font-bold text-black placeholder-slate-500 shadow-[3px_3px_0px_#000] focus:outline-none focus:bg-[#FFE600]/20 transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-[#181B26] border-2 border-black rounded-xl text-xs font-mono font-bold text-black dark:text-white placeholder-slate-500 dark:placeholder-slate-400 shadow-[3px_3px_0px_#000] focus:outline-none focus:bg-[#FFE600]/20 transition-all"
             />
           </div>
         </div>
@@ -67,7 +67,7 @@ export const SkillsRadar: React.FC = () => {
               className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer flex items-center gap-2 border-2 border-black ${
                 activeCategory === cat
                   ? 'bg-[#FFE600] text-black shadow-[4px_4px_0px_#000] translate-x-[-1px] translate-y-[-1px]'
-                  : 'bg-white text-black hover:bg-[#FAF7EE] shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000]'
+                  : 'bg-white dark:bg-[#181B26] text-black dark:text-slate-200 hover:bg-[#FAF7EE] dark:hover:bg-[#202534] shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000]'
               }`}
             >
               {cat !== 'All' && (
@@ -94,14 +94,14 @@ export const SkillsRadar: React.FC = () => {
               return (
                 <div
                   key={category}
-                  className="p-6 sm:p-7 rounded-2xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] hover:shadow-[9px_9px_0px_#000] hover:-translate-y-0.5 transition-all flex flex-col justify-between"
+                  className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[9px_9px_0px_#000] hover:-translate-y-0.5 transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center gap-3 pb-4 mb-5 border-b-2 border-black">
+                    <div className="flex items-center gap-3 pb-4 mb-5 border-b-2 border-black dark:border-[#2D3342]">
                       <div className={`p-2 rounded-lg border-2 border-black shadow-[2px_2px_0px_#000] ${categoryColors[category] || 'bg-[#FFE600]'}`}>
                         {categoryIcons[category]}
                       </div>
-                      <h3 className="text-base font-black font-mono text-black">
+                      <h3 className="text-base font-black font-mono text-black dark:text-white">
                         {category}
                       </h3>
                     </div>
@@ -110,14 +110,14 @@ export const SkillsRadar: React.FC = () => {
                       {filteredSkills.map((skill) => (
                         <div key={skill.name}>
                           <div className="flex justify-between text-xs font-mono font-bold mb-1.5">
-                            <span className="text-black">
+                            <span className="text-black dark:text-white">
                               {skill.name}
                             </span>
-                            <span className="text-slate-800">
+                            <span className="text-slate-800 dark:text-slate-300">
                               {skill.level}%
                             </span>
                           </div>
-                          <div className="h-2.5 w-full bg-[#FAF7EE] rounded-full border-2 border-black overflow-hidden">
+                          <div className="h-2.5 w-full bg-[#FAF7EE] dark:bg-[#202534] rounded-full border-2 border-black overflow-hidden">
                             <div
                               className="h-full bg-[#FFE600] border-r-2 border-black transition-all duration-700"
                               style={{ width: `${skill.level}%` }}
@@ -128,9 +128,9 @@ export const SkillsRadar: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t-2 border-black text-[11px] font-mono font-bold text-black flex items-center justify-between">
+                  <div className="mt-6 pt-4 border-t-2 border-black dark:border-[#2D3342] text-[11px] font-mono font-bold text-black dark:text-slate-300 flex items-center justify-between">
                     <span>PRODUCTION TESTED</span>
-                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#DCFCE7] border border-black rounded text-[#15803D]">
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#DCFCE7] dark:bg-[#064E3B] border border-black rounded text-[#15803D] dark:text-[#34D399]">
                       ✓ VERIFIED
                     </span>
                   </div>

@@ -6,7 +6,7 @@ export const AchievementsSection: React.FC = () => {
   const { achievements } = PORTFOLIO_DATA;
 
   return (
-    <section id="achievements" className="py-24 bg-pattern-dots border-t-[3px] border-black relative">
+    <section id="achievements" className="py-24 bg-pattern-dots border-t-[3px] border-black dark:border-[#2D3342] relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -15,10 +15,10 @@ export const AchievementsSection: React.FC = () => {
             <Trophy className="w-4 h-4" />
             <span>HONORS & COMPETITIVE EXCELLENCE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
             Key Achievements & Recognition
           </h2>
-          <p className="text-slate-800 text-sm sm:text-base max-w-2xl font-medium mt-3">
+          <p className="text-slate-800 dark:text-slate-300 text-sm sm:text-base max-w-2xl font-medium mt-3">
             Demonstrating elite algorithmic intuition, high-pressure problem solving, and innovative system engineering.
           </p>
         </div>
@@ -30,10 +30,10 @@ export const AchievementsSection: React.FC = () => {
             const isSecond = index === 1;
 
             const cardBg = isFirst 
-              ? 'bg-[#FEF9C3]' 
+              ? 'bg-[#FEF9C3] dark:bg-[#201D10] dark:border-[#FFE600]/50' 
               : isSecond 
-              ? 'bg-[#E0F2FE]' 
-              : 'bg-[#F3E8FF]';
+              ? 'bg-[#E0F2FE] dark:bg-[#0E1F2C] dark:border-[#38BDF8]/50' 
+              : 'bg-[#F3E8FF] dark:bg-[#1E142B] dark:border-[#A78BFA]/50';
 
             const badgeBg = isFirst 
               ? 'bg-[#FFE600]' 
@@ -48,13 +48,13 @@ export const AchievementsSection: React.FC = () => {
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="p-3 rounded-xl bg-white border-2 border-black shadow-[2.5px_2.5px_0px_#000]">
+                    <div className="p-3 rounded-xl bg-white dark:bg-[#181B26] border-2 border-black shadow-[2.5px_2.5px_0px_#000]">
                       {isFirst ? (
-                        <Trophy className="w-6 h-6 text-black" />
+                        <Trophy className="w-6 h-6 text-black dark:text-[#FFE600]" />
                       ) : isSecond ? (
-                        <Award className="w-6 h-6 text-black" />
+                        <Award className="w-6 h-6 text-black dark:text-[#38BDF8]" />
                       ) : (
-                        <GraduationCap className="w-6 h-6 text-black" />
+                        <GraduationCap className="w-6 h-6 text-black dark:text-[#A78BFA]" />
                       )}
                     </div>
 
@@ -63,28 +63,28 @@ export const AchievementsSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-black text-black mb-2 leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-black text-black dark:text-white mb-2 leading-snug">
                     {item.title}
                   </h3>
 
-                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 mb-4">
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 dark:text-slate-300 mb-4">
                     <span>{item.organization}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-black" />
+                      <Calendar className="w-3.5 h-3.5 text-black dark:text-white" />
                       {item.date}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-900 dark:text-slate-200 font-medium leading-relaxed mb-6">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t-2 border-black flex items-center justify-between text-xs font-mono font-bold text-black">
+                <div className="pt-4 border-t-2 border-black dark:border-black flex items-center justify-between text-xs font-mono font-bold text-black dark:text-white">
                   <span>VALIDATION</span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white border border-black rounded shadow-[1.5px_1.5px_0px_#000]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-black" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white dark:bg-[#181B26] border border-black rounded shadow-[1.5px_1.5px_0px_#000]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                     VERIFIED
                   </span>
                 </div>

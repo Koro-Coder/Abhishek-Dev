@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Terminal, Copy, Check, Menu, X, Sparkles } from 'lucide-react';
+import { Terminal, Copy, Check, Menu, X, Sparkles, Sun, Moon } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useTheme } from '../context/ThemeContext';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 interface NavbarProps {
@@ -8,6 +9,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
+  const { theme, toggleTheme } = useTheme();
   const [copied, setCopied] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -32,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-[#FAF7EE] border-b-[3px] border-black py-3">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-[#FAF7EE] dark:bg-[#0F1117] border-b-[3px] border-black dark:border-[#2D3342] py-3 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
@@ -42,10 +44,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               AA
             </div>
             <div>
-              <span className="font-extrabold text-base tracking-tight text-black block">
+              <span className="font-extrabold text-base tracking-tight text-black dark:text-white block">
                 abhishek.dev
               </span>
-              <p className="text-[11px] font-mono font-semibold text-slate-600 hidden sm:block">
+              <p className="text-[11px] font-mono font-semibold text-slate-600 dark:text-slate-400 hidden sm:block">
                 Backend & AI Systems
               </p>
             </div>
@@ -57,19 +59,40 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs font-mono font-bold text-black hover:bg-white rounded-lg transition-all border-2 border-transparent hover:border-black hover:shadow-[2px_2px_0px_#000]"
+                className="px-3.5 py-1.5 text-xs font-mono font-bold text-black dark:text-slate-200 hover:bg-white dark:hover:bg-[#1A1D27] rounded-lg transition-all border-2 border-transparent hover:border-black dark:hover:border-slate-700 hover:shadow-[2px_2px_0px_#000]"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* Action CTAs: Terminal, Copy Email, Hire Me */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Action CTAs: Theme Switcher, Terminal, Copy Email, Hire Me */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            
+            {/* Neubrutalist Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-white dark:bg-[#1A1D27] text-black dark:text-white text-xs font-mono font-black rounded-lg border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
+              title={theme === 'dark' ? 'Switch to Light Warm Cream' : 'Switch to Dark Neubrutalism'}
+              aria-label="Toggle dark mode"
+            >
+              {theme === 'dark' ? (
+                <>
+                  <Sun className="w-3.5 h-3.5 text-[#FFE600]" />
+                  <span className="hidden sm:inline">LIGHT</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="w-3.5 h-3.5 text-slate-800" />
+                  <span className="hidden sm:inline">DARK</span>
+                </>
+              )}
+            </button>
+
             {/* Terminal Trigger */}
             <button
               onClick={onOpenTerminal}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#A78BFA] text-black text-xs font-mono font-bold rounded-lg border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-[#A78BFA] text-black text-xs font-mono font-bold rounded-lg border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
               title="Launch Interactive Terminal (Ctrl + ~)"
             >
               <Terminal className="w-3.5 h-3.5" />
@@ -82,18 +105,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
             {/* Copy Email Button */}
             <button
               onClick={handleCopyEmail}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-white text-black text-xs font-mono font-bold rounded-lg border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#1A1D27] text-black dark:text-white text-xs font-mono font-bold rounded-lg border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
               title="Copy Email to Clipboard"
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-black" />
-                  <span className="text-black font-extrabold">Copied!</span>
+                  <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span className="text-black dark:text-white font-extrabold">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-black" />
-                  <span className="hidden sm:inline">Copy Email</span>
+                  <Copy className="w-3.5 h-3.5 text-black dark:text-white" />
+                  <span>Copy Email</span>
                 </>
               )}
             </button>
@@ -110,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 rounded-lg text-black bg-white border-2 border-black shadow-[2px_2px_0px_#000]"
+              className="md:hidden p-1.5 rounded-lg text-black dark:text-white bg-white dark:bg-[#1A1D27] border-2 border-black shadow-[2px_2px_0px_#000]"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -120,18 +143,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
 
         {/* Mobile dropdown menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 p-4 bg-white border-2 border-black rounded-xl shadow-[4px_4px_0px_#000] space-y-2">
+          <div className="md:hidden mt-3 p-4 bg-white dark:bg-[#161922] border-2 border-black rounded-xl shadow-[4px_4px_0px_#000] space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 text-sm font-bold text-black hover:bg-[#FFE600] border border-transparent hover:border-black rounded-lg transition-colors"
+                className="block px-3 py-2 text-sm font-bold text-black dark:text-white hover:bg-[#FFE600] hover:text-black dark:hover:bg-[#FFE600] dark:hover:text-black border border-transparent hover:border-black rounded-lg transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 border-t-2 border-black space-y-2">
+            <div className="pt-2 border-t-2 border-black dark:border-slate-800 space-y-2">
+              <button
+                onClick={() => {
+                  toggleTheme();
+                }}
+                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-[#FAF7EE] dark:bg-[#1E2330] text-black dark:text-white font-bold text-xs rounded-lg border-2 border-black shadow-[2px_2px_0px_#000]"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4 text-[#FFE600]" /> : <Moon className="w-4 h-4 text-slate-800" />}
+                <span>{theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}</span>
+              </button>
+
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -141,6 +174,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               >
                 <Terminal className="w-4 h-4" />
                 Launch Terminal
+              </button>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  handleCopyEmail();
+                }}
+                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-white dark:bg-[#1A1D27] text-black dark:text-white font-bold text-xs rounded-lg border-2 border-black shadow-[2px_2px_0px_#000]"
+              >
+                <Copy className="w-4 h-4" />
+                <span>{copied ? 'Copied to Clipboard!' : 'Copy Email'}</span>
               </button>
             </div>
           </div>

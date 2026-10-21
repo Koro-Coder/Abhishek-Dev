@@ -370,7 +370,7 @@ export const FeaturedProjects: React.FC = () => {
   const activeNodeData = activePipeline?.find(n => n.id === selectedPipelineNode) || activePipeline?.[0];
 
   return (
-    <section id="projects" className="py-20 relative bg-pattern-grid border-b-[3px] border-black">
+    <section id="projects" className="py-20 relative bg-pattern-grid border-b-[3px] border-black dark:border-[#2D3342] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -378,10 +378,10 @@ export const FeaturedProjects: React.FC = () => {
           <div className="inline-flex items-center gap-2 font-mono text-xs font-black bg-[#FFE600] text-black px-3 py-1 rounded-md border-2 border-black shadow-[2px_2px_0px_#000] mb-3">
             <span>FEATURED WORK & SCALE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
             Featured Systems & Deployments
           </h2>
-          <p className="text-slate-700 font-medium text-sm sm:text-base max-w-2xl mt-2">
+          <p className="text-slate-700 dark:text-slate-300 font-medium text-sm sm:text-base max-w-2xl mt-2">
             From enterprise microservices powering 10,000+ daily agents at Wells Fargo, to live production platforms and agentic browser tools.
           </p>
         </div>
@@ -390,7 +390,7 @@ export const FeaturedProjects: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           
           {/* Card 1: PrepFusion Study Hub */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-[#38BDF8] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
@@ -401,33 +401,33 @@ export const FeaturedProjects: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-black text-black group-hover:text-blue-600 transition-colors mb-1">
+              <h3 className="text-xl font-black text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#38BDF8] transition-colors mb-1">
                 PrepFusion Study Hub
               </h3>
-              <p className="text-xs font-mono font-bold text-blue-600 mb-4">
+              <p className="text-xs font-mono font-bold text-blue-600 dark:text-[#38BDF8] mb-4">
                 https://hub.prepfusion.in/
               </p>
 
-              <p className="text-slate-700 text-sm font-medium leading-relaxed mb-6">
+              <p className="text-slate-700 dark:text-slate-300 text-sm font-medium leading-relaxed mb-6">
                 Full-featured exam preparation platform engineered for GATE candidates. Instant access to <strong>every GATE question and solution</strong> categorized across subjects and years with <strong>zero sign-up friction</strong>.
               </p>
 
               {/* Technical highlights */}
               <div className="space-y-2 mb-6">
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Instant multi-axis filtering across 30+ subjects and years</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Engineered zero-paint theme detection to eliminate FOUC</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Dynamic 2400x1260 OpenGraph engine for WhatsApp/Telegram</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Cloudflare Edge distributed for sub-second page loads</span>
                 </div>
               </div>
@@ -435,7 +435,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['React', 'Vite', 'Cloudflare Edge', 'Tailwind CSS', 'OpenGraph Meta', 'LaTeX'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] text-black border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
                     {tag}
                   </span>
                 ))}
@@ -443,7 +443,7 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
               <a
                 href="https://hub.prepfusion.in/"
                 target="_blank"
@@ -455,7 +455,7 @@ export const FeaturedProjects: React.FC = () => {
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'prepfusion-hub')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-black text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -464,7 +464,7 @@ export const FeaturedProjects: React.FC = () => {
           </div>
 
           {/* Card 2: Fametown — Creator Discovery Platform */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-[#22C55E] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
@@ -475,33 +475,33 @@ export const FeaturedProjects: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-black text-black group-hover:text-emerald-700 transition-colors mb-1">
+              <h3 className="text-xl font-black text-black dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors mb-1">
                 Fametown
               </h3>
-              <p className="text-xs font-mono font-bold text-emerald-700 mb-4">
+              <p className="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 mb-4">
                 https://fametown.in/
               </p>
 
-              <p className="text-slate-700 text-sm font-medium leading-relaxed mb-6">
+              <p className="text-slate-700 dark:text-slate-300 text-sm font-medium leading-relaxed mb-6">
                 Commercial discovery platform ranking <strong>20L+ real Indian micro-influencers</strong> against brand DNA by analyzing engagement, audience demographics, language, and city computed from <strong>actual Instagram posts</strong>.
               </p>
 
               {/* Technical highlights */}
               <div className="space-y-2 mb-6">
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>AI Brand DNA generation directly from pasted brand website URLs</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Post-level engagement & Reel virality computed from real data</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>20L+ Indian micro-influencers indexed across 448 niches</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs font-medium text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 text-xs font-medium text-slate-800 dark:text-slate-200">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>Desktop swipe discovery deck with email & phone enrichment</span>
                 </div>
               </div>
@@ -509,7 +509,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['React', 'Node.js', 'Python', 'AI Matching', 'Instagram Telemetry', 'SaaS Billing'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] text-black border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
                     {tag}
                   </span>
                 ))}
@@ -517,7 +517,7 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
               <a
                 href="https://fametown.in/"
                 target="_blank"
@@ -529,7 +529,7 @@ export const FeaturedProjects: React.FC = () => {
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'fametown')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-black text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -538,7 +538,7 @@ export const FeaturedProjects: React.FC = () => {
           </div>
 
           {/* Card 3: LaLaTron AI Browser Copilot */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white border-[3px] border-black shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-[#A78BFA] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
@@ -549,40 +549,40 @@ export const FeaturedProjects: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-black text-black group-hover:text-purple-700 transition-colors mb-1">
+              <h3 className="text-xl font-black text-black dark:text-white group-hover:text-purple-700 dark:group-hover:text-[#A78BFA] transition-colors mb-1">
                 LaLaTron — AI Browser Copilot
               </h3>
-              <p className="text-xs font-mono font-bold text-purple-700 mb-4">
+              <p className="text-xs font-mono font-bold text-purple-700 dark:text-[#A78BFA] mb-4">
                 Chrome Extension (Manifest V3)
               </p>
 
-              <p className="text-slate-700 text-sm font-medium leading-relaxed mb-4">
+              <p className="text-slate-700 dark:text-slate-300 text-sm font-medium leading-relaxed mb-4">
                 Agentic browser extension that turns the web browser into an interactive AI workspace with <strong>live page conversation</strong>, <strong>intelligent form autofill</strong>, and <strong>in-page smart bookmarks</strong>.
               </p>
 
               {/* Interactive Mini-Simulator of LaLaTron's 3 Pillars */}
-              <div className="p-3.5 rounded-xl bg-[#FAF7EE] border-2 border-black shadow-[2px_2px_0px_#000] mb-5">
-                <div className="flex items-center justify-between pb-2 mb-2 border-b border-black text-[11px] font-mono text-black">
+              <div className="p-3.5 rounded-xl bg-[#FAF7EE] dark:bg-[#191D28] border-2 border-black shadow-[2px_2px_0px_#000] mb-5">
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-black text-[11px] font-mono text-black dark:text-white">
                   <span className="font-extrabold flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-purple-600" />
+                    <Sparkles className="w-3 h-3 text-purple-600 dark:text-[#A78BFA]" />
                     AGENT ENGINE
                   </span>
                   <div className="flex gap-1">
                     <button
                       onClick={() => setActiveLalaTab('chat')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'chat' ? 'bg-[#FFE600] shadow-[1px_1px_0px_#000]' : 'bg-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'chat' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       1. Chat
                     </button>
                     <button
                       onClick={() => setActiveLalaTab('autofill')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'autofill' ? 'bg-[#FFE600] shadow-[1px_1px_0px_#000]' : 'bg-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'autofill' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       2. Autofill
                     </button>
                     <button
                       onClick={() => setActiveLalaTab('bookmarks')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'bookmarks' ? 'bg-[#FFE600] shadow-[1px_1px_0px_#000]' : 'bg-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'bookmarks' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       3. Bookmarks
                     </button>
@@ -590,36 +590,36 @@ export const FeaturedProjects: React.FC = () => {
                 </div>
 
                 {activeLalaTab === 'chat' && (
-                  <div className="text-xs space-y-1 font-mono text-slate-800">
+                  <div className="text-xs space-y-1 font-mono text-slate-800 dark:text-slate-200">
                     <div className="flex items-center gap-1.5 font-bold">
-                      <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
+                      <MessageSquare className="w-3.5 h-3.5 text-blue-600 dark:text-[#38BDF8]" />
                       <span>Input: "Summarize technical requirements"</span>
                     </div>
-                    <div className="p-2 rounded bg-white border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
                       ⚡ <strong>DOM + Vision:</strong> Analyzing rendered DOM tree & visible viewport to deliver page-grounded insights.
                     </div>
                   </div>
                 )}
 
                 {activeLalaTab === 'autofill' && (
-                  <div className="text-xs space-y-1 font-mono text-slate-800">
+                  <div className="text-xs space-y-1 font-mono text-slate-800 dark:text-slate-200">
                     <div className="flex items-center gap-1.5 font-bold">
-                      <FileCheck className="w-3.5 h-3.5 text-emerald-600" />
+                      <FileCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                       <span>Knowledge Store: Resume.pdf</span>
                     </div>
-                    <div className="p-2 rounded bg-white border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
                       🎯 <strong>Field Match:</strong> Analyzes arbitrary form inputs and autofills structured fields with semantic precision.
                     </div>
                   </div>
                 )}
 
                 {activeLalaTab === 'bookmarks' && (
-                  <div className="text-xs space-y-1 font-mono text-slate-800">
+                  <div className="text-xs space-y-1 font-mono text-slate-800 dark:text-slate-200">
                     <div className="flex items-center gap-1.5 font-bold">
-                      <BookmarkCheck className="w-3.5 h-3.5 text-amber-600" />
+                      <BookmarkCheck className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                       <span>Jump Points in 10,000-word docs</span>
                     </div>
-                    <div className="p-2 rounded bg-white border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
                       📌 <strong>Smart Anchor:</strong> Records exact scroll coordinates & snapshots for 1-click return.
                     </div>
                   </div>
@@ -629,7 +629,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['Manifest V3', 'TypeScript', 'Vision APIs', 'DOM Scraping', 'Vector Matching'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] text-black border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
                     {tag}
                   </span>
                 ))}
@@ -637,7 +637,7 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
               <a
                 href="https://www.linkedin.com/feed/update/urn:li:activity:7436044630401609728/"
                 target="_blank"
@@ -649,7 +649,7 @@ export const FeaturedProjects: React.FC = () => {
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'lalatron')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-black text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -660,41 +660,41 @@ export const FeaturedProjects: React.FC = () => {
         </div>
 
         {/* Additional Enterprise & Algorithmic Systems */}
-        <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
+        <h3 className="text-xl font-black text-black dark:text-white mb-6 flex items-center gap-2">
           <span>// ADDITIONAL ENTERPRISE & ALGORITHMIC SYSTEMS</span>
-          <div className="h-[2px] flex-1 bg-black"></div>
+          <div className="h-[2px] flex-1 bg-black dark:bg-[#2D3342]"></div>
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {otherProjects.map((project) => (
             <div
               key={project.id}
-              className="p-6 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[6px_6px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-[#161922] border-2 border-black dark:border-[#2D3342] shadow-[4px_4px_0px_#000] hover:shadow-[6px_6px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-[10px] font-mono font-extrabold px-2 py-0.5 rounded bg-[#FFE600] text-black border border-black shadow-[1px_1px_0px_#000]">
                     {project.badge}
                   </span>
-                  <span className="text-[11px] font-mono font-bold text-slate-600">
+                  <span className="text-[11px] font-mono font-bold text-slate-600 dark:text-slate-400">
                     {project.category}
                   </span>
                 </div>
 
-                <h4 className="text-lg font-black text-black group-hover:text-blue-600 transition-colors mb-1">
+                <h4 className="text-lg font-black text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#38BDF8] transition-colors mb-1">
                   {project.title}
                 </h4>
-                <p className="text-xs font-mono font-bold text-slate-600 mb-3">
+                <p className="text-xs font-mono font-bold text-slate-600 dark:text-slate-400 mb-3">
                   {project.subtitle}
                 </p>
 
-                <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4 line-clamp-3">
+                <p className="text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed mb-4 line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Key Metric snippet */}
                 {project.metrics && project.metrics.length > 0 && (
-                  <div className="p-2.5 rounded-lg bg-[#FAF7EE] border border-black mb-4 text-[11px] font-mono font-bold text-black flex items-center gap-2 shadow-[1.5px_1.5px_0px_#000]">
+                  <div className="p-2.5 rounded-lg bg-[#FAF7EE] dark:bg-[#1E2332] border border-black mb-4 text-[11px] font-mono font-bold text-black dark:text-slate-200 flex items-center gap-2 shadow-[1.5px_1.5px_0px_#000]">
                     <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                     <span className="line-clamp-1">{project.metrics[0]}</span>
                   </div>
@@ -703,12 +703,12 @@ export const FeaturedProjects: React.FC = () => {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-6">
                   {project.tags.slice(0, 4).map(tag => (
-                    <span key={tag} className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#FAF7EE] text-black border border-black">
+                    <span key={tag} className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black">
                       {tag}
                     </span>
                   ))}
                   {project.tags.length > 4 && (
-                    <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold text-slate-500">
+                    <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400">
                       +{project.tags.length - 4}
                     </span>
                   )}
@@ -716,10 +716,10 @@ export const FeaturedProjects: React.FC = () => {
               </div>
 
               {/* Card Footer CTAs */}
-              <div className="flex items-center justify-between pt-3 border-t-2 border-black">
+              <div className="flex items-center justify-between pt-3 border-t-2 border-black dark:border-[#2D3342]">
                 <button
                   onClick={() => handleOpenArchitecture(project)}
-                  className="text-xs font-mono font-bold text-black hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-mono font-bold text-black dark:text-slate-200 hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>Inspect Architecture</span>
@@ -758,8 +758,8 @@ export const FeaturedProjects: React.FC = () => {
 
       {/* Deep-Dive Inspect Architecture Modal - Neubrutalist Styled */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-white border-[3.5px] border-black p-6 sm:p-8 shadow-[10px_10px_0px_#000] relative text-black">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-white dark:bg-[#13161F] border-[3.5px] border-black dark:border-[#2D3342] p-6 sm:p-8 shadow-[10px_10px_0px_#000] relative text-black dark:text-white">
             {/* Modal close */}
             <button
               onClick={() => setActiveProject(null)}
@@ -774,25 +774,25 @@ export const FeaturedProjects: React.FC = () => {
                 {activeProject.badge}
               </span>
               <span>•</span>
-              <span className="text-slate-600">{activeProject.category}</span>
+              <span className="text-slate-600 dark:text-slate-400">{activeProject.category}</span>
             </div>
 
-            <h3 className="text-2xl sm:text-4xl font-black text-black mb-1">
+            <h3 className="text-2xl sm:text-4xl font-black text-black dark:text-white mb-1">
               {activeProject.title}
             </h3>
-            <p className="text-xs sm:text-sm font-mono font-bold text-slate-600 mb-6">
+            <p className="text-xs sm:text-sm font-mono font-bold text-slate-600 dark:text-slate-400 mb-6">
               {activeProject.subtitle}
             </p>
 
             {/* Interactive Architecture Pipeline */}
             {activePipeline && activePipeline.length > 0 && (
-              <div className="mb-8 p-5 rounded-2xl bg-[#FAF7EE] border-2 border-black shadow-[4px_4px_0px_#000]">
+              <div className="mb-8 p-5 rounded-2xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[4px_4px_0px_#000]">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 font-mono text-xs font-black text-black">
-                    <span className="w-2.5 h-2.5 bg-black rounded-sm"></span>
+                  <div className="flex items-center gap-2 font-mono text-xs font-black text-black dark:text-white">
+                    <span className="w-2.5 h-2.5 bg-black dark:bg-[#FFE600] rounded-sm"></span>
                     <span className="tracking-wider">SYSTEM DESIGN & INTERACTIVE PIPELINE</span>
                   </div>
-                  <span className="text-[11px] font-mono font-bold text-slate-600 hidden sm:inline">
+                  <span className="text-[11px] font-mono font-bold text-slate-600 dark:text-slate-400 hidden sm:inline">
                     Click stage to inspect
                   </span>
                 </div>
@@ -805,25 +805,25 @@ export const FeaturedProjects: React.FC = () => {
                       <div
                         key={node.id}
                         onClick={() => setSelectedPipelineNode(node.id)}
-                        style={{ backgroundColor: isSelected ? node.color : '#FFFFFF' }}
+                        style={{ backgroundColor: isSelected ? node.color : undefined }}
                         className={`p-3 rounded-xl border-2 border-black transition-all cursor-pointer flex flex-col justify-between relative ${
                           isSelected
-                            ? 'shadow-[4px_4px_0px_#000] -translate-x-0.5 -translate-y-0.5'
-                            : 'shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000]'
+                            ? 'shadow-[4px_4px_0px_#000] -translate-x-0.5 -translate-y-0.5 text-black'
+                            : 'bg-white dark:bg-[#141720] shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000] text-black dark:text-white'
                         }`}
                       >
                         {/* Desktop connector arrow */}
                         {idx < activePipeline.length - 1 && (
-                          <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-black">
+                          <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-black dark:text-slate-400">
                             <ArrowRight className="w-3.5 h-3.5" />
                           </div>
                         )}
 
                         <div className="flex flex-col gap-1">
-                          <span className="text-[10px] font-mono font-black text-black tracking-wider">
+                          <span className="text-[10px] font-mono font-black tracking-wider opacity-80">
                             {node.stageNumber}
                           </span>
-                          <h5 className="text-xs font-black text-black leading-snug line-clamp-2">
+                          <h5 className="text-xs font-black leading-snug line-clamp-2">
                             {node.title.replace(/^\d+\.\s*/, '')}
                           </h5>
                         </div>
@@ -834,11 +834,11 @@ export const FeaturedProjects: React.FC = () => {
 
                 {/* Selected Node Details Box */}
                 {activeNodeData && (
-                  <div className="p-4 rounded-xl bg-white border-2 border-black shadow-[3px_3px_0px_#000] text-xs leading-relaxed">
+                  <div className="p-4 rounded-xl bg-white dark:bg-[#141720] border-2 border-black shadow-[3px_3px_0px_#000] text-xs leading-relaxed">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2 pb-2 border-b border-black">
                       <div className="flex items-center gap-2">
-                        <Info className="w-4 h-4 text-black" />
-                        <span className="font-black text-black text-sm">
+                        <Info className="w-4 h-4 text-black dark:text-white" />
+                        <span className="font-black text-black dark:text-white text-sm">
                           {activeNodeData.title} — {activeNodeData.role}
                         </span>
                       </div>
@@ -846,12 +846,12 @@ export const FeaturedProjects: React.FC = () => {
                         <span className="px-2 py-0.5 rounded font-extrabold bg-[#22C55E] text-black border border-black shadow-[1px_1px_0px_#000]">
                           {activeNodeData.metric}
                         </span>
-                        <span className="px-2 py-0.5 rounded font-bold bg-[#FAF7EE] text-black border border-black">
+                        <span className="px-2 py-0.5 rounded font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black">
                           {activeNodeData.tech}
                         </span>
                       </div>
                     </div>
-                    <p className="text-slate-800 font-medium text-xs">
+                    <p className="text-slate-800 dark:text-slate-300 font-medium text-xs">
                       {activeNodeData.details}
                     </p>
                   </div>
@@ -861,20 +861,20 @@ export const FeaturedProjects: React.FC = () => {
 
             {/* Architecture Details: Problem & Solution */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-[#FAF7EE] border-2 border-black shadow-[3px_3px_0px_#000]">
-                <h4 className="text-xs font-mono font-black text-black uppercase tracking-wider mb-1.5">
+              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[3px_3px_0px_#000]">
+                <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-1.5">
                   PROBLEM CONTEXT
                 </h4>
-                <p className="text-xs text-slate-800 font-medium leading-relaxed">
+                <p className="text-xs text-slate-800 dark:text-slate-300 font-medium leading-relaxed">
                   {activeProject.architectureDetails.problem}
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#FAF7EE] border-2 border-black shadow-[3px_3px_0px_#000]">
-                <h4 className="text-xs font-mono font-black text-black uppercase tracking-wider mb-1.5">
+              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[3px_3px_0px_#000]">
+                <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-1.5">
                   ENGINEERING SOLUTION
                 </h4>
-                <p className="text-xs text-slate-800 font-medium leading-relaxed">
+                <p className="text-xs text-slate-800 dark:text-slate-300 font-medium leading-relaxed">
                   {activeProject.architectureDetails.solution}
                 </p>
               </div>
@@ -882,13 +882,13 @@ export const FeaturedProjects: React.FC = () => {
 
             {/* Tech Highlights */}
             <div className="mb-6">
-              <h4 className="text-xs font-mono font-black text-black uppercase tracking-wider mb-3">
+              <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-3">
                 Key Technical Highlights
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {activeProject.architectureDetails.techHighlights.map((hl, idx) => (
-                  <div key={idx} className="flex items-start gap-2 p-2.5 rounded-lg bg-white border-2 border-black shadow-[2px_2px_0px_#000] text-xs font-medium text-black">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-2 p-2.5 rounded-lg bg-white dark:bg-[#141720] border-2 border-black shadow-[2px_2px_0px_#000] text-xs font-medium text-black dark:text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span>{hl}</span>
                   </div>
                 ))}
@@ -897,12 +897,12 @@ export const FeaturedProjects: React.FC = () => {
 
             {/* Metrics Checklist */}
             <div className="mb-6">
-              <h4 className="text-xs font-mono font-black text-black uppercase tracking-wider mb-3">
+              <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-3">
                 Measurable Impact & Metrics
               </h4>
               <div className="space-y-1.5">
                 {activeProject.metrics.map((m, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs font-mono font-bold text-black">
+                  <div key={idx} className="flex items-center gap-2 text-xs font-mono font-bold text-black dark:text-slate-200">
                     <span className="w-2 h-2 rounded-full bg-[#22C55E] border border-black"></span>
                     <span>{m}</span>
                   </div>
@@ -913,14 +913,14 @@ export const FeaturedProjects: React.FC = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-8">
               {activeProject.tags.map(t => (
-                <span key={t} className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#FAF7EE] text-black border border-black shadow-[1px_1px_0px_#000]">
+                <span key={t} className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#FAF7EE] dark:bg-[#1A1E2B] text-black dark:text-slate-200 border border-black shadow-[1px_1px_0px_#000]">
                   {t}
                 </span>
               ))}
             </div>
 
             {/* Footer Buttons */}
-            <div className="flex items-center justify-end gap-3 pt-4 border-t-2 border-black">
+            <div className="flex items-center justify-end gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
               {activeProject.liveUrl && (
                 <a
                   href={activeProject.liveUrl}
@@ -945,7 +945,7 @@ export const FeaturedProjects: React.FC = () => {
               )}
               <button
                 onClick={() => setActiveProject(null)}
-                className="px-4 py-2.5 rounded-xl bg-white text-black text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="px-4 py-2.5 rounded-xl bg-white dark:bg-[#1A1E2B] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 Close
               </button>

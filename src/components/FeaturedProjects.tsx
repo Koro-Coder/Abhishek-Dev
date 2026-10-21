@@ -370,12 +370,12 @@ export const FeaturedProjects: React.FC = () => {
   const activeNodeData = activePipeline?.find(n => n.id === selectedPipelineNode) || activePipeline?.[0];
 
   return (
-    <section id="projects" className="py-20 relative bg-pattern-grid border-b-[3px] border-black dark:border-[#2D3342] transition-colors duration-200">
+    <section id="projects" className="py-20 relative bg-pattern-grid border-b-[3px] border-black dark:border-white transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 font-mono text-xs font-black bg-[#FFE600] text-black px-3 py-1 rounded-md border-2 border-black shadow-[2px_2px_0px_#000] mb-3">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-black bg-[#FFE600] text-black px-3 py-1 rounded-md border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFE600] mb-3">
             <span>FEATURED WORK & SCALE</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
@@ -389,14 +389,14 @@ export const FeaturedProjects: React.FC = () => {
         {/* Highlight Banner: 3 Primary Flagships in Neubrutalism Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           
-          {/* Card 1: PrepFusion Study Hub */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          {/* Card 1: PrepFusion Study Hub - High Contrast Electric Cyan Boundary */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#38BDF8] shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#38BDF8] hover:shadow-[8px_8px_0px_#000] hover:dark:shadow-[9px_9px_0px_#38BDF8] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#38BDF8] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
+                <div className="w-12 h-12 rounded-xl bg-[#38BDF8] border-2 border-black dark:border-white flex items-center justify-center text-black shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF]">
                   <Globe className="w-6 h-6" />
                 </div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#38BDF8] text-black border-2 border-black shadow-[2px_2px_0px_#000]">
+                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#38BDF8] text-black border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFF]">
                   Live Platform
                 </span>
               </div>
@@ -435,7 +435,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['React', 'Vite', 'Cloudflare Edge', 'Tailwind CSS', 'OpenGraph Meta', 'LaTeX'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black dark:border-[#38BDF8]/50 shadow-[1.5px_1.5px_0px_#000] dark:shadow-[1.5px_1.5px_0px_#38BDF8]">
                     {tag}
                   </span>
                 ))}
@@ -443,19 +443,19 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#38BDF8]/40">
               <a
                 href="https://hub.prepfusion.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#38BDF8] hover:bg-[#0EA5E9] text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#38BDF8] hover:bg-[#0EA5E9] text-black font-extrabold text-xs border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <span>Launch Hub</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'prepfusion-hub')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#38BDF8] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -463,14 +463,14 @@ export const FeaturedProjects: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 2: Fametown — Creator Discovery Platform */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          {/* Card 2: Fametown — High Contrast Electric Green Boundary */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#22C55E] shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#22C55E] hover:shadow-[8px_8px_0px_#000] hover:dark:shadow-[9px_9px_0px_#22C55E] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#22C55E] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
+                <div className="w-12 h-12 rounded-xl bg-[#22C55E] border-2 border-black dark:border-white flex items-center justify-center text-black shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF]">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#22C55E] text-black border-2 border-black shadow-[2px_2px_0px_#000]">
+                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#22C55E] text-black border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFF]">
                   Live Commercial SaaS
                 </span>
               </div>
@@ -509,7 +509,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['React', 'Node.js', 'Python', 'AI Matching', 'Instagram Telemetry', 'SaaS Billing'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black dark:border-[#22C55E]/50 shadow-[1.5px_1.5px_0px_#000] dark:shadow-[1.5px_1.5px_0px_#22C55E]">
                     {tag}
                   </span>
                 ))}
@@ -517,19 +517,19 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#22C55E]/40">
               <a
                 href="https://fametown.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-extrabold text-xs border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <span>Launch Fametown</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'fametown')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#22C55E] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -537,14 +537,14 @@ export const FeaturedProjects: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 3: LaLaTron AI Browser Copilot */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#2D3342] shadow-[6px_6px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
+          {/* Card 3: LaLaTron — High Contrast Electric Purple Boundary */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#161922] border-[3px] border-black dark:border-[#A78BFA] shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#A78BFA] hover:shadow-[8px_8px_0px_#000] hover:dark:shadow-[9px_9px_0px_#A78BFA] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#A78BFA] border-2 border-black flex items-center justify-center text-black shadow-[3px_3px_0px_#000]">
+                <div className="w-12 h-12 rounded-xl bg-[#A78BFA] border-2 border-black dark:border-white flex items-center justify-center text-black shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF]">
                   <Bot className="w-6 h-6" />
                 </div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#A78BFA] text-black border-2 border-black shadow-[2px_2px_0px_#000]">
+                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-[#A78BFA] text-black border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFF]">
                   Flagship AI Tool
                 </span>
               </div>
@@ -561,8 +561,8 @@ export const FeaturedProjects: React.FC = () => {
               </p>
 
               {/* Interactive Mini-Simulator of LaLaTron's 3 Pillars */}
-              <div className="p-3.5 rounded-xl bg-[#FAF7EE] dark:bg-[#191D28] border-2 border-black shadow-[2px_2px_0px_#000] mb-5">
-                <div className="flex items-center justify-between pb-2 mb-2 border-b border-black text-[11px] font-mono text-black dark:text-white">
+              <div className="p-3.5 rounded-xl bg-[#FAF7EE] dark:bg-[#191D28] border-2 border-black dark:border-[#A78BFA] shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#A78BFA] mb-5">
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-black dark:border-[#A78BFA]/50 text-[11px] font-mono text-black dark:text-white">
                   <span className="font-extrabold flex items-center gap-1">
                     <Sparkles className="w-3 h-3 text-purple-600 dark:text-[#A78BFA]" />
                     AGENT ENGINE
@@ -570,19 +570,19 @@ export const FeaturedProjects: React.FC = () => {
                   <div className="flex gap-1">
                     <button
                       onClick={() => setActiveLalaTab('chat')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'chat' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black dark:border-white ${activeLalaTab === 'chat' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       1. Chat
                     </button>
                     <button
                       onClick={() => setActiveLalaTab('autofill')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'autofill' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black dark:border-white ${activeLalaTab === 'autofill' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       2. Autofill
                     </button>
                     <button
                       onClick={() => setActiveLalaTab('bookmarks')}
-                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black ${activeLalaTab === 'bookmarks' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold border border-black dark:border-white ${activeLalaTab === 'bookmarks' ? 'bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-[#141720] text-black dark:text-white'}`}
                     >
                       3. Bookmarks
                     </button>
@@ -595,7 +595,7 @@ export const FeaturedProjects: React.FC = () => {
                       <MessageSquare className="w-3.5 h-3.5 text-blue-600 dark:text-[#38BDF8]" />
                       <span>Input: "Summarize technical requirements"</span>
                     </div>
-                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black dark:border-white text-[11px]">
                       ⚡ <strong>DOM + Vision:</strong> Analyzing rendered DOM tree & visible viewport to deliver page-grounded insights.
                     </div>
                   </div>
@@ -607,7 +607,7 @@ export const FeaturedProjects: React.FC = () => {
                       <FileCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                       <span>Knowledge Store: Resume.pdf</span>
                     </div>
-                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black dark:border-white text-[11px]">
                       🎯 <strong>Field Match:</strong> Analyzes arbitrary form inputs and autofills structured fields with semantic precision.
                     </div>
                   </div>
@@ -619,7 +619,7 @@ export const FeaturedProjects: React.FC = () => {
                       <BookmarkCheck className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                       <span>Jump Points in 10,000-word docs</span>
                     </div>
-                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black text-[11px]">
+                    <div className="p-2 rounded bg-white dark:bg-[#141720] border border-black dark:border-white text-[11px]">
                       📌 <strong>Smart Anchor:</strong> Records exact scroll coordinates & snapshots for 1-click return.
                     </div>
                   </div>
@@ -629,7 +629,7 @@ export const FeaturedProjects: React.FC = () => {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-1.5 mb-8">
                 {['Manifest V3', 'TypeScript', 'Vision APIs', 'DOM Scraping', 'Vector Matching'].map(tag => (
-                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black shadow-[1.5px_1.5px_0px_#000]">
+                  <span key={tag} className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black dark:border-[#A78BFA]/50 shadow-[1.5px_1.5px_0px_#000] dark:shadow-[1.5px_1.5px_0px_#A78BFA]">
                     {tag}
                   </span>
                 ))}
@@ -637,19 +637,19 @@ export const FeaturedProjects: React.FC = () => {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t-2 border-black dark:border-[#A78BFA]/40">
               <a
                 href="https://www.linkedin.com/feed/update/urn:li:activity:7436044630401609728/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#A78BFA] hover:bg-[#8B5CF6] text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#A78BFA] hover:bg-[#8B5CF6] text-black font-extrabold text-xs border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <span>LinkedIn Demo</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <button
                 onClick={() => handleOpenArchitecture(PORTFOLIO_DATA.projects.find(p => p.id === 'lalatron')!)}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1E2332] hover:bg-slate-100 dark:hover:bg-[#282E40] text-black dark:text-white text-xs font-mono font-bold border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#A78BFA] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 <Eye className="w-3.5 h-3.5" />
                 <span>Inspect Architecture</span>
@@ -662,14 +662,14 @@ export const FeaturedProjects: React.FC = () => {
         {/* Additional Enterprise & Algorithmic Systems */}
         <h3 className="text-xl font-black text-black dark:text-white mb-6 flex items-center gap-2">
           <span>// ADDITIONAL ENTERPRISE & ALGORITHMIC SYSTEMS</span>
-          <div className="h-[2px] flex-1 bg-black dark:bg-[#2D3342]"></div>
+          <div className="h-[2px] flex-1 bg-black dark:bg-white"></div>
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {otherProjects.map((project) => (
             <div
               key={project.id}
-              className="p-6 rounded-2xl bg-white dark:bg-[#161922] border-2 border-black dark:border-[#2D3342] shadow-[4px_4px_0px_#000] hover:shadow-[6px_6px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-white dark:bg-[#161922] border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFFFFF] hover:shadow-[6px_6px_0px_#000] hover:dark:shadow-[6px_6px_0px_#FFE600] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -694,7 +694,7 @@ export const FeaturedProjects: React.FC = () => {
 
                 {/* Key Metric snippet */}
                 {project.metrics && project.metrics.length > 0 && (
-                  <div className="p-2.5 rounded-lg bg-[#FAF7EE] dark:bg-[#1E2332] border border-black mb-4 text-[11px] font-mono font-bold text-black dark:text-slate-200 flex items-center gap-2 shadow-[1.5px_1.5px_0px_#000]">
+                  <div className="p-2.5 rounded-lg bg-[#FAF7EE] dark:bg-[#1E2332] border border-black dark:border-white/60 mb-4 text-[11px] font-mono font-bold text-black dark:text-slate-200 flex items-center gap-2 shadow-[1.5px_1.5px_0px_#000] dark:shadow-[1.5px_1.5px_0px_#FFF]">
                     <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                     <span className="line-clamp-1">{project.metrics[0]}</span>
                   </div>
@@ -703,7 +703,7 @@ export const FeaturedProjects: React.FC = () => {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-6">
                   {project.tags.slice(0, 4).map(tag => (
-                    <span key={tag} className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black">
+                    <span key={tag} className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black dark:border-white/40">
                       {tag}
                     </span>
                   ))}
@@ -716,7 +716,7 @@ export const FeaturedProjects: React.FC = () => {
               </div>
 
               {/* Card Footer CTAs */}
-              <div className="flex items-center justify-between pt-3 border-t-2 border-black dark:border-[#2D3342]">
+              <div className="flex items-center justify-between pt-3 border-t-2 border-black dark:border-white/40">
                 <button
                   onClick={() => handleOpenArchitecture(project)}
                   className="text-xs font-mono font-bold text-black dark:text-slate-200 hover:underline flex items-center gap-1 cursor-pointer"
@@ -731,7 +731,7 @@ export const FeaturedProjects: React.FC = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-[#FFE600] text-black border border-black shadow-[2px_2px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all"
+                      className="p-1.5 rounded-lg bg-[#FFE600] text-black border border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFE600] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all"
                       title="Live Site"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -742,7 +742,7 @@ export const FeaturedProjects: React.FC = () => {
                       href={project.linkedinUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-1.5 rounded-lg bg-[#A78BFA] text-black border border-black shadow-[2px_2px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all"
+                      className="p-1.5 rounded-lg bg-[#A78BFA] text-black border border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#A78BFA] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all"
                       title="LinkedIn Post"
                     >
                       <LinkedinIcon className="w-3.5 h-3.5" />
@@ -759,18 +759,18 @@ export const FeaturedProjects: React.FC = () => {
       {/* Deep-Dive Inspect Architecture Modal - Neubrutalist Styled */}
       {activeProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-white dark:bg-[#13161F] border-[3.5px] border-black dark:border-[#2D3342] p-6 sm:p-8 shadow-[10px_10px_0px_#000] relative text-black dark:text-white">
+          <div className="w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-white dark:bg-[#13161F] border-[3.5px] border-black dark:border-white p-6 sm:p-8 shadow-[10px_10px_0px_#000] dark:shadow-[10px_10px_0px_#FFE600] relative text-black dark:text-white">
             {/* Modal close */}
             <button
               onClick={() => setActiveProject(null)}
-              className="absolute top-6 right-6 p-2 rounded-xl bg-[#FFE600] text-black border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer font-mono font-bold z-10"
+              className="absolute top-6 right-6 p-2 rounded-xl bg-[#FFE600] text-black border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer font-mono font-bold z-10"
             >
               ✕
             </button>
 
             {/* Badge & Title */}
             <div className="flex items-center gap-2 font-mono text-xs font-bold mb-2">
-              <span className="px-2.5 py-0.5 rounded bg-[#FFE600] text-black border border-black shadow-[1.5px_1.5px_0px_#000]">
+              <span className="px-2.5 py-0.5 rounded bg-[#FFE600] text-black border border-black dark:border-white shadow-[1.5px_1.5px_0px_#000]">
                 {activeProject.badge}
               </span>
               <span>•</span>
@@ -786,7 +786,7 @@ export const FeaturedProjects: React.FC = () => {
 
             {/* Interactive Architecture Pipeline */}
             {activePipeline && activePipeline.length > 0 && (
-              <div className="mb-8 p-5 rounded-2xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[4px_4px_0px_#000]">
+              <div className="mb-8 p-5 rounded-2xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFF]">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2 font-mono text-xs font-black text-black dark:text-white">
                     <span className="w-2.5 h-2.5 bg-black dark:bg-[#FFE600] rounded-sm"></span>
@@ -806,15 +806,15 @@ export const FeaturedProjects: React.FC = () => {
                         key={node.id}
                         onClick={() => setSelectedPipelineNode(node.id)}
                         style={{ backgroundColor: isSelected ? node.color : undefined }}
-                        className={`p-3 rounded-xl border-2 border-black transition-all cursor-pointer flex flex-col justify-between relative ${
+                        className={`p-3 rounded-xl border-2 border-black dark:border-white transition-all cursor-pointer flex flex-col justify-between relative ${
                           isSelected
-                            ? 'shadow-[4px_4px_0px_#000] -translate-x-0.5 -translate-y-0.5 text-black'
-                            : 'bg-white dark:bg-[#141720] shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000] text-black dark:text-white'
+                            ? 'shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFE600] -translate-x-0.5 -translate-y-0.5 text-black'
+                            : 'bg-white dark:bg-[#141720] shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFF] hover:shadow-[3px_3px_0px_#000] text-black dark:text-white'
                         }`}
                       >
                         {/* Desktop connector arrow */}
                         {idx < activePipeline.length - 1 && (
-                          <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-black dark:text-slate-400">
+                          <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-black dark:text-white">
                             <ArrowRight className="w-3.5 h-3.5" />
                           </div>
                         )}
@@ -834,8 +834,8 @@ export const FeaturedProjects: React.FC = () => {
 
                 {/* Selected Node Details Box */}
                 {activeNodeData && (
-                  <div className="p-4 rounded-xl bg-white dark:bg-[#141720] border-2 border-black shadow-[3px_3px_0px_#000] text-xs leading-relaxed">
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2 pb-2 border-b border-black">
+                  <div className="p-4 rounded-xl bg-white dark:bg-[#141720] border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFE600] text-xs leading-relaxed">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2 pb-2 border-b border-black dark:border-white/40">
                       <div className="flex items-center gap-2">
                         <Info className="w-4 h-4 text-black dark:text-white" />
                         <span className="font-black text-black dark:text-white text-sm">
@@ -846,7 +846,7 @@ export const FeaturedProjects: React.FC = () => {
                         <span className="px-2 py-0.5 rounded font-extrabold bg-[#22C55E] text-black border border-black shadow-[1px_1px_0px_#000]">
                           {activeNodeData.metric}
                         </span>
-                        <span className="px-2 py-0.5 rounded font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black">
+                        <span className="px-2 py-0.5 rounded font-bold bg-[#FAF7EE] dark:bg-[#1E2332] text-black dark:text-slate-200 border border-black dark:border-white/40">
                           {activeNodeData.tech}
                         </span>
                       </div>
@@ -861,7 +861,7 @@ export const FeaturedProjects: React.FC = () => {
 
             {/* Architecture Details: Problem & Solution */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[3px_3px_0px_#000]">
+              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF]">
                 <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-1.5">
                   PROBLEM CONTEXT
                 </h4>
@@ -870,7 +870,7 @@ export const FeaturedProjects: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black shadow-[3px_3px_0px_#000]">
+              <div className="p-4 rounded-xl bg-[#FAF7EE] dark:bg-[#1A1E2B] border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF]">
                 <h4 className="text-xs font-mono font-black text-black dark:text-white uppercase tracking-wider mb-1.5">
                   ENGINEERING SOLUTION
                 </h4>
@@ -887,7 +887,7 @@ export const FeaturedProjects: React.FC = () => {
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {activeProject.architectureDetails.techHighlights.map((hl, idx) => (
-                  <div key={idx} className="flex items-start gap-2 p-2.5 rounded-lg bg-white dark:bg-[#141720] border-2 border-black shadow-[2px_2px_0px_#000] text-xs font-medium text-black dark:text-slate-200">
+                  <div key={idx} className="flex items-start gap-2 p-2.5 rounded-lg bg-white dark:bg-[#141720] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] text-xs font-medium text-black dark:text-slate-200">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span>{hl}</span>
                   </div>
@@ -903,7 +903,7 @@ export const FeaturedProjects: React.FC = () => {
               <div className="space-y-1.5">
                 {activeProject.metrics.map((m, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs font-mono font-bold text-black dark:text-slate-200">
-                    <span className="w-2 h-2 rounded-full bg-[#22C55E] border border-black"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#22C55E] border border-black dark:border-white"></span>
                     <span>{m}</span>
                   </div>
                 ))}
@@ -913,20 +913,20 @@ export const FeaturedProjects: React.FC = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-8">
               {activeProject.tags.map(t => (
-                <span key={t} className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#FAF7EE] dark:bg-[#1A1E2B] text-black dark:text-slate-200 border border-black shadow-[1px_1px_0px_#000]">
+                <span key={t} className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#FAF7EE] dark:bg-[#1A1E2B] text-black dark:text-slate-200 border border-black dark:border-white/40 shadow-[1px_1px_0px_#000]">
                   {t}
                 </span>
               ))}
             </div>
 
             {/* Footer Buttons */}
-            <div className="flex items-center justify-end gap-3 pt-4 border-t-2 border-black dark:border-[#2D3342]">
+            <div className="flex items-center justify-end gap-3 pt-4 border-t-2 border-black dark:border-white/40">
               {activeProject.liveUrl && (
                 <a
                   href={activeProject.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFE600] text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FFE600] text-black font-extrabold text-xs border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFE600] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all"
                 >
                   <span>Open Live Site</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -937,7 +937,7 @@ export const FeaturedProjects: React.FC = () => {
                   href={activeProject.linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#A78BFA] text-black font-extrabold text-xs border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#A78BFA] text-black font-extrabold text-xs border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#A78BFA] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all"
                 >
                   <span>LinkedIn Announcement</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -945,7 +945,7 @@ export const FeaturedProjects: React.FC = () => {
               )}
               <button
                 onClick={() => setActiveProject(null)}
-                className="px-4 py-2.5 rounded-xl bg-white dark:bg-[#1A1E2B] text-black dark:text-white text-xs font-mono font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="px-4 py-2.5 rounded-xl bg-white dark:bg-[#1A1E2B] text-black dark:text-white text-xs font-mono font-bold border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFF] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 Close
               </button>

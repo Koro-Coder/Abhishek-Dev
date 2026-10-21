@@ -9,21 +9,21 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
   return (
-    <footer className="py-14 bg-[#FAF7EE] dark:bg-[#0D0F14] border-t-[3px] border-black dark:border-[#2D3342] text-xs font-mono text-black dark:text-slate-300 transition-colors duration-200">
+    <footer className="py-14 bg-[#FAF7EE] dark:bg-[#0D0F14] border-t-[3px] border-black dark:border-white text-xs font-mono text-black dark:text-slate-300 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b-2 border-black dark:border-[#2D3342]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b-2 border-black dark:border-white/30">
           
           {/* Brand & Identity */}
           <div className="md:col-span-2 space-y-3.5">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-[#FFE600] border-2 border-black shadow-[2px_2px_0px_#000] flex items-center justify-center font-black text-black text-sm">
+              <div className="w-8 h-8 rounded-lg bg-[#FFE600] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFE600] flex items-center justify-center font-black text-black text-sm">
                 AA
               </div>
               <span className="text-black dark:text-white font-black text-base">
                 Abhishek Aggarwal
               </span>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#22C55E] text-black border border-black font-bold text-[10px]">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#22C55E] text-black border border-black dark:border-white font-bold text-[10px]">
                 ● PROD SYSTEM ONLINE
               </span>
             </div>
@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
                 href={PORTFOLIO_DATA.personal.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-lg bg-white dark:bg-[#161922] border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-[#38BDF8] text-black dark:text-white dark:hover:text-black transition-all"
+                className="p-2 rounded-lg bg-white dark:bg-[#161922] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#38BDF8] hover:bg-[#38BDF8] text-black dark:text-white dark:hover:text-black transition-all"
                 title="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -44,16 +44,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
                 href={PORTFOLIO_DATA.personal.github}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-lg bg-white dark:bg-[#161922] border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-[#A78BFA] text-black dark:text-white dark:hover:text-black transition-all"
+                className="p-2 rounded-lg bg-white dark:bg-[#161922] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#A78BFA] hover:bg-[#A78BFA] text-black dark:text-white dark:hover:text-black transition-all"
                 title="GitHub"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
               <button
                 onClick={onOpenTerminal}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FFE600] border-2 border-black text-black font-bold text-xs shadow-[2px_2px_0px_#000] hover:shadow-[3px_3px_0px_#000] cursor-pointer transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FFE600] border-2 border-black dark:border-white text-black font-bold text-xs shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFE600] hover:shadow-[3px_3px_0px_#000] cursor-pointer transition-all"
               >
-                <Terminal className="w-3.5 h-3.5" />
+                <Terminal className="w-3.5 h-3.5 text-black" />
                 <span>terminal.sh</span>
               </button>
             </div>
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
                     className="hover:text-black dark:hover:text-white flex items-center gap-1.5 hover:underline transition-all"
                   >
                     <span>PrepFusion Study Hub</span>
-                    <ExternalLink className="w-3 h-3 text-black dark:text-slate-300" />
+                    <ExternalLink className="w-3.5 h-3.5 text-black dark:text-slate-300" />
                   </a>
                 </li>
                 <li>
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
                     className="hover:text-black dark:hover:text-white flex items-center gap-1.5 hover:underline transition-all"
                   >
                     <span>Fametown Creator Platform</span>
-                    <ExternalLink className="w-3 h-3 text-black dark:text-slate-300" />
+                    <ExternalLink className="w-3.5 h-3.5 text-black dark:text-slate-300" />
                   </a>
                 </li>
                 <li>
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
                     className="hover:text-black dark:hover:text-white flex items-center gap-1.5 hover:underline transition-all"
                   >
                     <span>LaLaTron AI Copilot</span>
-                    <ExternalLink className="w-3 h-3 text-black dark:text-slate-300" />
+                    <ExternalLink className="w-3.5 h-3.5 text-black dark:text-slate-300" />
                   </a>
                 </li>
                 <li>
@@ -116,7 +116,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
             © {new Date().getFullYear()} Abhishek Aggarwal. Built with precision for engineering recruiters.
           </div>
           <div className="flex items-center gap-1 text-black dark:text-white font-bold">
-            <span>Neubrutalism Edition</span>
+            <span>High-Voltage Dark Neubrutalism</span>
           </div>
         </div>
 

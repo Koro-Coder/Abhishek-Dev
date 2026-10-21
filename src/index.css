@@ -80,13 +80,13 @@
 }
 
 .dark .brutal-card {
-  background-color: #171A23;
-  border-color: #2E3446;
-  box-shadow: 4px 4px 0px 0px #000000;
+  background-color: #161922;
+  border-color: #FFFFFF;
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
 }
 
 .dark .brutal-card:hover {
-  box-shadow: 6px 6px 0px 0px #000000;
+  box-shadow: 6px 6px 0px 0px #FFFFFF;
 }
 
 .brutal-card-static {
@@ -96,9 +96,9 @@
 }
 
 .dark .brutal-card-static {
-  background-color: #171A23;
-  border-color: #2E3446;
-  box-shadow: 4px 4px 0px 0px #000000;
+  background-color: #161922;
+  border-color: #FFFFFF;
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
 }
 
 .brutal-btn {
@@ -111,6 +111,11 @@
 .brutal-btn:hover {
   box-shadow: 1px 1px 0px 0px #000000;
   transform: translate(2px, 2px);
+}
+
+.dark .brutal-btn {
+  border-color: #FFFFFF;
+  box-shadow: 3px 3px 0px 0px #FFFFFF;
 }
 
 .brutal-btn:active {
@@ -136,7 +141,7 @@
 
 .dark ::-webkit-scrollbar-track {
   background: #0F1117;
-  border-left: 2px solid #2D3342;
+  border-left: 2px solid #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {

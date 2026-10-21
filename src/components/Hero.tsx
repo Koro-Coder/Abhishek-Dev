@@ -32,13 +32,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-pattern-blueprint border-b-[3px] border-black dark:border-[#2D3342] transition-colors duration-200">
+    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-pattern-blueprint border-b-[3px] border-black dark:border-white transition-colors duration-200">
       
       {/* Background Architectural Blueprint Stamps */}
-      <div className="absolute top-20 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-slate-700 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
+      <div className="absolute top-20 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-400 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-white/40 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
         SPEC: AA-ENG-2026 // GRID 120x24
       </div>
-      <div className="absolute bottom-6 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-slate-700 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
+      <div className="absolute bottom-6 right-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-400 select-none hidden xl:block tracking-widest border border-slate-300 dark:border-white/40 px-2 py-0.5 rounded bg-white/60 dark:bg-black/60">
         MATH & COMPUTING RIGOR // DTU 9.03
       </div>
       <div className="absolute top-24 left-8 font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 select-none hidden xl:block tracking-widest">
@@ -52,8 +52,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
           <div className="lg:col-span-8 flex flex-col items-start order-2 lg:order-1">
             
             {/* Top Status Capsule */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#181B26] border-2 border-black text-xs font-mono font-bold text-black dark:text-white mb-8 shadow-[3px_3px_0px_#000]">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#22C55E] border border-black inline-block animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#181B26] border-2 border-black dark:border-white text-xs font-mono font-bold text-black dark:text-white mb-8 shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFE600]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#22C55E] border border-black dark:border-white inline-block animate-pulse"></span>
               <span>SOFTWARE ENGINEER @ WELLS FARGO</span>
               <span className="text-slate-400">|</span>
               <span className="text-black dark:text-slate-200">BACKEND & AI SYSTEMS</span>
@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-black dark:text-white mb-8 leading-[1.1]">
               Hi, I'm{' '}
-              <span className="bg-[#FFE600] px-3 py-1 border-[2.5px] border-black inline-block shadow-[4px_4px_0px_#000] -rotate-1 rounded-lg text-black">
+              <span className="bg-[#FFE600] px-3 py-1 border-[2.5px] border-black dark:border-white inline-block shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFF] -rotate-1 rounded-lg text-black">
                 Abhishek Aggarwal
               </span>.
               <br />
@@ -80,17 +80,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#projects"
-                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#FFE600] hover:bg-[#FACC15] text-black font-extrabold text-sm border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer group"
+                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#FFE600] hover:bg-[#FACC15] text-black font-extrabold text-sm border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFE600] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer group"
               >
                 <span>Explore Featured Work</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-black" />
               </a>
 
               <button
                 onClick={onOpenTerminal}
-                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#A78BFA] hover:bg-[#8B5CF6] text-black font-mono font-bold text-xs border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#A78BFA] hover:bg-[#8B5CF6] text-black font-mono font-bold text-xs border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#A78BFA] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
-                <Terminal className="w-4 h-4" />
+                <Terminal className="w-4 h-4 text-black" />
                 <span>Launch Terminal</span>
                 <span className="text-[10px] bg-white text-black px-1.5 py-0.5 rounded border border-black font-mono">
                   CLI
@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-[#181B26] hover:bg-slate-50 dark:hover:bg-[#222736] text-black dark:text-white font-mono font-bold text-xs border-2 border-black shadow-[4px_4px_0px_#000] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-[#181B26] hover:bg-slate-50 dark:hover:bg-[#222736] text-black dark:text-white font-mono font-bold text-xs border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#FFFFFF] hover:shadow-[2px_2px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
                 {copied ? (
                   <>
@@ -124,11 +124,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
               onClick={handleAvatarClick}
             >
               {/* Playful Floating Speech Bubble / Neubrutalist Badge */}
-              <div className="absolute -top-5 -left-3 sm:-left-5 px-3 py-1 rounded-md bg-[#FFE600] border-2 border-black font-mono font-black text-xs text-black shadow-[3px_3px_0px_#000] -rotate-6 z-20 group-hover:rotate-0 group-hover:scale-105 transition-all">
+              <div className="absolute -top-5 -left-3 sm:-left-5 px-3 py-1 rounded-md bg-[#FFE600] border-2 border-black dark:border-white font-mono font-black text-xs text-black shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFE600] -rotate-6 z-20 group-hover:rotate-0 group-hover:scale-105 transition-all">
                 <span>HEY THERE! 👋</span>
               </div>
 
-              {/* Cutout Image with Neubrutalist drop shadow */}
+              {/* Cutout Image with Electric Neon Neubrutalist drop shadow */}
               <img 
                 src={`${import.meta.env.BASE_URL}abhishek-avatar.png`} 
                 alt="Abhishek Aggarwal" 
@@ -136,7 +136,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
               />
 
               {/* Bottom sticker badge */}
-              <div className="absolute -bottom-2 -right-1 px-3 py-1 rounded-md bg-white dark:bg-[#181B26] border-2 border-black font-mono font-bold text-[11px] text-black dark:text-white shadow-[2.5px_2.5px_0px_#000] rotate-3 group-hover:rotate-0 transition-all">
+              <div className="absolute -bottom-2 -right-1 px-3 py-1 rounded-md bg-white dark:bg-[#181B26] border-2 border-black dark:border-white font-mono font-bold text-[11px] text-black dark:text-white shadow-[2.5px_2.5px_0px_#000] dark:shadow-[2.5px_2.5px_0px_#22C55E] rotate-3 group-hover:rotate-0 transition-all">
                 <span>⚡ 100% BUILDER</span>
               </div>
             </div>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Birch / Aspen Leaf in rich golden-amber -->
+  <path d="M24 6 C32 10 38 18 36 28 C34 35 28 37 25 38 L25 44 L23 44 L23 38 C20 37 14 35 12 28 C10 18 16 10 24 6 Z" fill="#D97706" stroke="#1F2937" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Central Vein -->
+  <path d="M24 10 L24 38" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M24 16 L30 14 M24 16 L18 14 M24 23 L32 20 M24 23 L16 20 M24 30 L29 28 M24 30 L19 28" stroke="#78350F" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

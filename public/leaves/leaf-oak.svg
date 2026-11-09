@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Oak leaf in golden yellow -->
+  <path d="M24 5 C28 8 32 9 30 14 C35 16 36 21 32 24 C36 28 34 32 30 34 C31 37 28 39 25 38 L25 44 L23 44 L23 38 C20 39 17 37 18 34 C14 32 12 28 16 24 C12 21 13 16 18 14 C16 9 20 8 24 5 Z" fill="#F59E0B" stroke="#1F2937" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Central Vein -->
+  <path d="M24 10 L24 38" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M24 17 L29 14 M24 17 L19 14 M24 25 L31 22 M24 25 L17 22 M24 32 L29 30 M24 32 L19 30" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

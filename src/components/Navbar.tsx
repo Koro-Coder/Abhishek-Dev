@@ -69,22 +69,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
           {/* Action CTAs: Theme Switcher, Terminal, Copy Email, Hire Me */}
           <div className="flex items-center gap-2 sm:gap-2.5">
             
-            {/* Neubrutalist High-Contrast Theme Toggle Button */}
+            {/* Neubrutalist High-Contrast Seasonal Theme Toggle Button */}
             <button
               onClick={toggleTheme}
               className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-white dark:bg-[#1A1D27] text-black dark:text-white text-xs font-mono font-black rounded-lg border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#FFE600] hover:shadow-[1px_1px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer"
-              title={theme === 'dark' ? 'Switch to Light Warm Cream' : 'Switch to Dark Neubrutalism'}
-              aria-label="Toggle dark mode"
+              title={theme === 'dark' ? 'Switch to Fall (Light Theme with Falling Autumn Leaves)' : 'Switch to Winter (Night Theme with Snowfall)'}
+              aria-label="Toggle seasonal theme"
             >
               {theme === 'dark' ? (
                 <>
                   <Sun className="w-3.5 h-3.5 text-[#FFE600]" />
-                  <span className="hidden sm:inline">LIGHT</span>
+                  <span className="hidden sm:inline">FALL (LIGHT)</span>
                 </>
               ) : (
                 <>
                   <Moon className="w-3.5 h-3.5 text-slate-800" />
-                  <span className="hidden sm:inline">DARK</span>
+                  <span className="hidden sm:inline">WINTER (DARK)</span>
                 </>
               )}
             </button>
@@ -162,7 +162,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
                 className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-[#FAF7EE] dark:bg-[#1E2330] text-black dark:text-white font-bold text-xs rounded-lg border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#FFE600]"
               >
                 {theme === 'dark' ? <Sun className="w-4 h-4 text-[#FFE600]" /> : <Moon className="w-4 h-4 text-slate-800" />}
-                <span>{theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}</span>
+                <span>{theme === 'dark' ? 'Switch to Fall (Light Theme)' : 'Switch to Winter (Night Theme)'}</span>
               </button>
 
               <button

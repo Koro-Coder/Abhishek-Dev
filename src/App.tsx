@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
+import { SeasonalParticles } from './components/SeasonalParticles';
 import { Hero } from './components/Hero';
 import { FeaturedProjects } from './components/FeaturedProjects';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
@@ -27,6 +28,9 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-[#FAF7EE] dark:bg-[#0F1117] text-black dark:text-slate-100 flex flex-col font-sans selection:bg-[#FFE600] selection:text-black transition-colors duration-200">
+      {/* Seasonal Ambient Canvas: Fall Leaves in Light Theme / Winter Snowfall in Night Theme */}
+      <SeasonalParticles />
+
       {/* Top Navigation Bar with Neubrutalist Theme Switcher */}
       <Navbar onOpenTerminal={() => setTerminalOpen(true)} />
 

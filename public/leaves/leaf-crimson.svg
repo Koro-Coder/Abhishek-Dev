@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Crimson Autumn Leaf -->
+  <path d="M24 6 C34 14 36 26 27 36 L24 44 L21 36 C12 26 14 14 24 6 Z" fill="#DC2626" stroke="#1F2937" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Central Vein -->
+  <path d="M24 10 L24 38" stroke="#991B1B" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M24 18 L29 15 M24 18 L19 15 M24 26 L30 23 M24 26 L18 23 M24 33 L28 31 M24 33 L20 31" stroke="#991B1B" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
